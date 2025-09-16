@@ -1,0 +1,269 @@
+/* Page Header */
+.page-header {
+  background: url(../assets/images/journey.jpg) no-repeat center center/cover;
+  color: $white;
+  padding: 10rem 5% 5rem;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, $goldenrod 0%, $goldenrod-light 10%);
+    opacity: 0.2;
+    z-index: 2;
+  }
+  
+  h1 {
+    font-size: 3.0rem;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 5;
+  }
+  
+  p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 5;
+  }
+}
+
+/* About Content */
+.about-content1 {
+  padding: $spacing-xxl 5%;
+  .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* My Story */
+.my-story {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $spacing-xxl;
+  margin-bottom: $spacing-xxl;
+  align-items: center;
+}
+
+.story-text {
+  h2 {
+    font-size: 2rem;
+    margin-bottom: $spacing-md;
+    color: $gray;
+  }
+  
+  p {
+    margin-bottom: $spacing-md;
+    color: $gray;
+    line-height: 1.8;
+  }
+}
+
+.story-image {
+  position: relative;
+  height: 400px;
+  background: linear-gradient(45deg, $beige, $goldenrod-light);
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.story-image-content {
+  text-align: center;
+  color: $white;
+  padding: $spacing-lg;
+  
+  i {
+    font-size: 4rem;
+    margin-bottom: $spacing-md;
+  }
+  
+  h3 {
+    font-size: 1.8rem;
+    margin-bottom: $spacing-sm;
+  }
+}
+
+}
+
+
+/* Journey */
+.journey {
+  margin-bottom: $spacing-xxl;
+}
+
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: $beige;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+  }
+}
+
+.timeline-item {
+  padding: 10px 40px;
+  position: relative;
+  width: 50%;
+  box-sizing: border-box;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: $white;
+    border: 4px solid $goldenrod;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  left: 50%;
+}
+
+.left::after {
+  right: -13px;
+}
+
+.right::after {
+  left: -13px;
+}
+
+.timeline-content {
+  padding: 20px;
+  background-color: $white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  
+  h3 {
+    color: $goldenrod;
+    margin-bottom: 0.5rem;
+  }
+  
+  p {
+    color: $gray;
+  }
+}
+
+/* Skills Section */
+.skills-section {
+  margin-bottom: $spacing-xxl;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: $spacing-lg;
+}
+
+.skill-category {
+  background: $beige;
+  padding: $spacing-lg;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  i {
+    font-size: 2.5rem;
+    color: $goldenrod;
+    margin-bottom: $spacing-sm;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: $spacing-sm;
+    color: $dark;
+  }
+}
+
+.skill-list {
+  list-style: none;
+  
+  li {
+    padding: 0.5rem 0;
+    color: $gray;
+  }
+}
+
+/* Philosophy */
+.philosophy {
+  background: $light-gray;
+  padding: $spacing-xxl 5%;
+  text-align: center;
+}
+
+.philosophy-content {
+  max-width: 800px;
+  margin: 0 auto;
+  
+  h2 {
+    font-size: 2.2rem;
+    margin-bottom: $spacing-lg;
+    color: $dark;
+  }
+  
+  p {
+    font-size: 1.2rem;
+    margin-bottom: $spacing-lg;
+    color: $gray;
+    font-style: italic;
+  }
+}
+
+.quote-author {
+  font-weight: $font-weight-semibold;
+  color: $goldenrod;
+}
+
+/* CTA Section */
+.btn1 {
+  display: inline-block;
+  padding: $spacing-sm $spacing-xl;
+  background: $white;
+  color: $goldenrod;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: $font-weight-semibold;
+  transition: all 0.3s;
+  border: 2px solid $white;
+  
+  &:hover {
+    background: transparent;
+    color: $white;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+  }
+}
+
+.section-subtitle{
+  text-align: center;
+  font-size: large;
+}

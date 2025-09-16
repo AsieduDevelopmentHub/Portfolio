@@ -1,0 +1,261 @@
+
+/* Contact Content */
+.contact-content {
+  padding: $spacing-xxl 5%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: $spacing-xl;
+  color: $dark;
+  
+  span {
+    color: $goldenrod;
+  }
+}
+
+/* Contact Methods */
+.contact-methods {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: $spacing-xl;
+  margin-bottom: $spacing-xxl;
+  padding: $spacing-lg;
+}
+
+
+
+.contact-card {
+  background: $white;
+  border-radius: 10px;
+  padding: 2.5rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  text-align: center;
+  
+  &:hover {
+    transform: translateY(-10px);
+  }
+}
+
+.contact-icon {
+  width: 70px;
+  height: 70px;
+  background: $beige;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto $spacing-md;
+  
+  i {
+    font-size: 2rem;
+    color: $goldenrod;
+  }
+}
+
+.contact-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: $spacing-sm;
+  color: $dark;
+}
+
+.contact-card p {
+  color: $gray;
+  margin-bottom: $spacing-md;
+}
+
+.contact-link {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background: $goldenrod;
+  color: $white;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: $font-weight-semibold;
+  transition: all 0.3s;
+  
+  &:hover {
+    background: $dark;
+    transform: translateY(-3px);
+  }
+}
+
+/* Response Time */
+.response-time {
+  text-align: center;
+  margin-bottom: $spacing-xl;
+  padding: $spacing-lg;
+  background: $beige;
+  border-radius: 10px;
+  
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: $spacing-sm;
+    color: $dark;
+  }
+  
+  p {
+    color: $gray;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+/* Contact Form */
+.contact-form-section {
+  background: $light-gray;
+  padding: $spacing-xxl 5%;
+  border-radius: 10px;
+  margin-bottom: $spacing-xxl;
+}
+
+.form-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.form-description {
+  text-align: center;
+  margin-bottom: $spacing-xl;
+  color: $gray;
+}
+
+.contact-form {
+  background: $white;
+  padding: $spacing-xl;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.form-group {
+  margin-bottom: $spacing-md;
+  
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: $font-weight-medium;
+    color: $dark;
+  }
+}
+
+.form-control {
+  width: 100%;
+  padding: $spacing-sm;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-family: $font-primary;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+  
+  &:focus {
+    outline: none;
+    border-color: $goldenrod;
+  }
+}
+
+textarea.form-control {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.submit-btn {
+  display: block;
+  width: 100%;
+  padding: $spacing-sm;
+  background: $goldenrod;
+  color: $white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-weight: $font-weight-semibold;
+  cursor: pointer;
+  transition: all 0.3s;
+  
+  &:hover {
+    background: $dark;
+    transform: translateY(-3px);
+  }
+}
+
+/* FAQ Section */
+.faq-section {
+  margin-bottom: $spacing-xxl;
+}
+
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  background: $white;
+  border-radius: 10px;
+  margin-bottom: $spacing-md;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.faq-question {
+  padding: $spacing-md;
+  font-size: 1.1rem;
+  font-weight: $font-weight-semibold;
+  color: $dark;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  i {
+    transition: transform 0.3s;
+  }
+}
+
+.faq-answer {
+  padding: 0 $spacing-md $spacing-md;
+  color: $gray;
+  display: none;
+}
+
+.faq-item.active .faq-answer {
+  display: block;
+}
+
+.faq-item.active .faq-question i {
+  transform: rotate(180deg);
+}
+
+/* Map Section */
+.map-section {
+  margin-bottom: $spacing-xxl;
+}
+
+.map-container {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  height: 400px;
+}
+
+.map-placeholder {
+  background: linear-gradient(45deg, $beige, $beige-dark);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: $dark;
+  text-align: center;
+  
+  i {
+    font-size: 3rem;
+    margin-bottom: $spacing-sm;
+    color: $goldenrod;
+  }
+}

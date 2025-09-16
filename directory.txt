@@ -1,0 +1,22 @@
+your-portfolio/
+├── index.html
+├── about.html
+├── projects.html
+├── skills.html
+├── contact.html
+├── css/
+│   ├── main.scss
+│   ├── main.css
+│   ├── _variables.scss
+│   ├── _header.scss
+│   ├── _footer.scss
+│   ├── _responsive.scss
+│   └── _pages.scss
+├── js/
+│   ├── components/
+│   │   ├── headerFooter.js
+│   │   └── dynamicElements.js
+│   └── main.js
+└── assets/
+    ├── images/
+    └── icons/

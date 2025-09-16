@@ -1,0 +1,136 @@
+footer {
+  background: $dark;
+  color: $white;
+  padding: $spacing-xxl 5% $spacing-lg;
+  
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: $spacing-xl;
+  }
+  
+  .footer-logo {
+    font-size: 1.8rem;
+    font-weight: $font-weight-bold;
+    margin-bottom: $spacing-sm;
+    color: $goldenrod;
+  }
+  
+  .footer-links {
+    h3 {
+      font-size: 1.2rem;
+      margin-bottom: $spacing-md;
+      color: $goldenrod;
+    }
+    
+    ul {
+      list-style: none;
+      
+      li {
+        margin-bottom: $spacing-xs;
+        
+        a {
+          color: $beige;
+          text-decoration: none;
+          transition: color 0.3s;
+          
+          &:hover {
+            color: $goldenrod;
+          }
+        }
+      }
+    }
+  }
+  
+  .social-links {
+    display: flex;
+    gap: $spacing-sm;
+    margin-top: $spacing-md;
+    
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+      color: $white;
+      transition: all 0.3s;
+      
+      &:hover {
+        background: $goldenrod;
+        transform: translateY(-3px);
+      }
+    }
+  }
+  
+  .copyright {
+    text-align: center;
+    margin-top: $spacing-xxl;
+    padding-top: $spacing-lg;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
+
+.scroll-buttons {
+    position: fixed;
+    right: $spacing-lg;
+    bottom: $spacing-lg;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-sm;
+}
+
+.scroll-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, $goldenrod-light, $goldenrod);
+    color: $white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 16px rgba(218, 165, 32, 0.3);
+        background: linear-gradient(135deg, $goldenrod, darken($goldenrod, 10%));
+    }
+
+    &.visible {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+}
+
+// Responsive styles for footer
+@media (max-width: $breakpoint-mobile) {
+  footer {
+    .footer-content {
+      grid-template-columns: 1fr;
+    }
+  }
+  .scroll-buttons {
+        right: $spacing-md;
+        bottom: $spacing-md;
+    }
+    
+    .scroll-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 1.1rem;
+    }
+}

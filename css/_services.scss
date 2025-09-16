@@ -1,0 +1,114 @@
+/* Service Grid */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: $spacing-lg;
+  margin: $spacing-xl 0;
+  padding: $spacing-lg
+}
+
+.service-card {
+  background: $white;
+  border-radius: 10px;
+  padding: 2.5rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  text-align: center;
+  
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0,0,0,.15);
+  }
+}
+
+.service-icon {
+  width: 70px;
+  height: 70px;
+  background: $beige;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto $spacing-md;
+  
+  i {
+    font-size: 2rem;
+    color: $goldenrod;
+  }
+}
+
+.contact-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: $spacing-sm;
+  color: $dark;
+}
+
+.contact-card p {
+  color: $gray;
+  margin-bottom: $spacing-md;
+}
+
+.tech-stack strong {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 0.4rem 0.7rem;
+  margin: auto 0.2rem 0.5rem 0;
+  background: linear-gradient(90deg, $goldenrod, $goldenrod, $beige-dark);
+  color: $white;
+  border-radius: 50px;
+  font-weight: $font-weight-semibold;
+  transition: all 0.3s;
+  
+  &:hover {
+    background: transparent;
+    color: $goldenrod;
+    border: 2px solid $goldenrod-light;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(218, 165, 32, 0.3);
+  }
+}
+    
+/* Decorative line */
+.decorative-line {
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(90deg, $goldenrod-light, $beige-dark, $goldenrod);
+  margin: $spacing-sm auto $spacing-md;
+  border-radius: 2px;
+}
+
+/* Tech Stack Tags */
+.tech-stack {
+  margin-top: auto;
+  padding-top: $spacing-md;
+}
+    
+
+
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .container {
+        padding: $spacing-md;
+      }
+      
+      h1 {
+        font-size: 2rem;
+        margin-top: $spacing-lg;
+      }
+      
+      .services-grid {
+        grid-template-columns: 1fr;
+        gap: $spacing-md;
+      }
+      
+      .service-card {
+        padding: $spacing-lg;
+      }
+      
+      .section-head {
+        margin: $spacing-lg auto;
+      }
+    }

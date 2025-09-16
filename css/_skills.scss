@@ -1,0 +1,374 @@
+
+/* Skills Content */
+.skills-content {
+  padding: $spacing-xxl 5%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: $spacing-xl;
+  color: $dark;
+  
+  span {
+    color: $goldenrod;
+  }
+}
+
+/* Skills Overview */
+.skills-overview {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto $spacing-xxl;
+  
+  p {
+    font-size: 1.1rem;
+    color: $gray;
+    margin-bottom: $spacing-lg;
+  }
+}
+
+/* Skills Categories */
+.skills-categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: $spacing-xl;
+  margin-bottom: $spacing-xxl;
+}
+
+.skills-category {
+  background: $white;
+  border-radius: 10px;
+  padding: 2.5rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  
+  &:hover {
+    transform: translateY(-10px);
+  }
+}
+
+.category-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: $spacing-lg;
+}
+
+.category-icon {
+  width: 60px;
+  height: 60px;
+  background: $beige;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: $spacing-md;
+  
+  i {
+    font-size: 1.8rem;
+    color: $goldenrod;
+  }
+}
+
+.category-title {
+  font-size: 1.5rem;
+  color: $dark;
+}
+
+/* Skill Items */
+.skill-item {
+  margin-bottom: 1.8rem;
+}
+
+.skill-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.skill-name {
+  font-weight: $font-weight-semibold;
+  color: $dark;
+}
+
+.skill-percentage {
+  color: $goldenrod;
+  font-weight: $font-weight-semibold;
+}
+
+.skill-progress {
+  height: 10px;
+  background: $beige;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.skill-progress-bar {
+  height: 100%;
+  background: $goldenrod;
+  border-radius: 5px;
+  position: relative;
+  width: 0;
+  transition: width 1.5s ease-in-out;
+}
+
+/* Tools & Technologies */
+.tools-section {
+  margin-bottom: $spacing-xxl;
+}
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: $spacing-lg;
+}
+
+.tool-card {
+  background: $white;
+  border-radius: 10px;
+  padding: $spacing-md;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.tool-icon {
+  font-size: 2.5rem;
+  color: $goldenrod;
+  margin-bottom: $spacing-sm;
+}
+
+.tool-name {
+  font-size: 1.1rem;
+  font-weight: $font-weight-semibold;
+  color: $dark;
+  margin-bottom: 0.5rem;
+}
+
+.tool-description {
+  color: $gray;
+  font-size: 0.9rem;
+}
+
+/* Experience Timeline */
+.experience-section {
+  margin-bottom: $spacing-xxl;
+
+  .timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background-color: $beige;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px;
+  }
+}
+
+.timeline-item {
+  padding: 10px 40px;
+  position: relative;
+  width: 50%;
+  box-sizing: border-box;
+  margin-bottom: $spacing-lg;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: $white;
+    border: 4px solid $goldenrod;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+}
+
+.left {
+  left: 0;
+  text-align: right;
+}
+
+.right {
+  left: 50%;
+}
+
+.left::after {
+  right: -12px;
+}
+
+.right::after {
+  left: -12px;
+}
+
+.timeline-content {
+  padding: 20px;
+  background-color: $white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-date {
+  color: $goldenrod;
+  font-weight: $font-weight-semibold;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-title {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: $dark;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.timeline-description {
+  color: $gray;
+}
+}
+
+/* Certifications */
+.certifications-section {
+  margin-bottom: $spacing-xxl;
+}
+
+.certifications-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: $spacing-lg;
+}
+
+.certification-card {
+  background: $white;
+  border-radius: 10px;
+  padding: $spacing-md;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s;
+  display: flex;
+  flex-direction: column;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.certification-title {
+  font-size: 1.2rem;
+  font-weight: $font-weight-semibold;
+  color: $dark;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.certification-org {
+  color: $goldenrod;
+  font-weight: $font-weight-medium;
+  margin-bottom: $spacing-sm;
+}
+
+.certification-date {
+  color: $gray;
+  font-size: 0.9rem;
+  margin-top: auto;
+}
+
+/* Learning Path */
+.learning-path {
+  margin-bottom: $spacing-xxl;
+}
+
+.path-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: $spacing-lg;
+}
+
+.path-item {
+  background: $white;
+  border-radius: 10px;
+  padding: $spacing-md;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  }
+  
+  i {
+    font-size: 2rem;
+    color: $goldenrod;
+    margin-bottom: $spacing-sm;
+  }
+  
+  h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: $dark;
+  }
+  
+  p {
+    color: $gray;
+    font-size: 0.9rem;
+  }
+}
+
+/* CTA Section */
+.cta-section {
+  padding: $spacing-xxl 5%;
+  text-align: center;
+  background: linear-gradient(135deg, $goldenrod 0%, $goldenrod-light 100%);
+  color: $white;
+  
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: $spacing-md;
+  }
+  
+  p {
+    max-width: 700px;
+    margin: 0 auto $spacing-lg;
+    font-size: 1.2rem;
+  }
+}
+
+.btn {
+  display: inline-block;
+  padding: $spacing-sm $spacing-xl;
+  background: $white;
+  color: $goldenrod;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: $font-weight-semibold;
+  transition: all 0.3s;
+  border: 2px solid $white;
+  
+  &:hover {
+    background: transparent;
+    color: $white;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+  }
+}

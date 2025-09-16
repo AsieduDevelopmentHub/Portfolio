@@ -1,0 +1,84 @@
+// Import all partials
+@import 'variables';
+@import 'header';
+@import 'footer';
+@import 'responsive';
+@import 'index';
+@import 'about';
+@import 'projects';
+@import 'skills';
+@import 'services';
+@import 'contact';
+@import 'mobile';
+
+// Base styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-primary;
+  width: 100%;
+  color: $dark;
+  background-color: $white;
+  overflow-x: hidden;
+  line-height: 1.6;
+  padding-top: 80px; // Account for fixed header
+}
+
+main {
+  width: 100%;
+}
+
+// Utility classes
+.text-center {
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  padding: $spacing-sm $spacing-xl;
+  background: $goldenrod;
+  color: $white;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: $font-weight-semibold;
+  transition: all 0.3s;
+  border: 2px solid $goldenrod;
+  
+  &:hover {
+    background: transparent;
+    color: $goldenrod;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(218, 165, 32, 0.2);
+  }
+  
+  &--outline {
+    background: transparent;
+    color: $goldenrod;
+    
+    &:hover {
+      background: $goldenrod;
+      color: $white;
+    }
+  }
+}
+
+// Page content styles
+.page-content {
+  min-height: calc(100vh - 200px); // Adjust based on header/footer height
+  padding: $spacing-xl 5%;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: $spacing-xl;
+  color: $dark;
+  
+  span {
+    color: $goldenrod;
+  }
+}

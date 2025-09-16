@@ -1,0 +1,210 @@
+ @media (max-width: $breakpoint-tablet) {
+    // Header adjustments
+    header {
+        nav {
+        ul {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background: $white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding: $spacing-sm 0;
+            
+            &.show {
+            display: flex;
+            }
+            
+            li {
+            margin: 0;
+            text-align: center;
+            
+            a {
+                display: block;
+                padding: $spacing-sm;
+            }
+            }
+        }
+        
+        .menu-btn {
+            display: block;
+        }
+        }
+    }
+
+    // Hero section adjustments
+    .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: 2.8rem;
+    }
+
+    .about-preview .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+    .hero-visual {
+        height: 300px;
+    }
+
+    .cube-container {
+        width: 200px;
+        height: 200px;
+    }
+
+    .cube-face {
+        width: 200px;
+        height: 200px;
+    }
+
+    .front { transform: translateZ(100px); }
+    .back { transform: translateZ(-100px) rotateY(180deg); }
+    .right { transform: translateX(0px) rotateY(90deg); }
+    .left { transform: translateX(-100px) rotateY(-90deg); }
+    .top { transform: translateY(-100px) rotateX(90deg); }
+    .bottom { transform: translateY(100px) rotateX(-90deg); }
+
+    // About page adjustments
+    .about-content1 .my-story {
+        grid-template-columns: 1fr;
+    }
+    
+    .timeline::after {
+        left: 31px;
+    }
+
+    .timeline{
+        .timeline-item {
+            width: 100%;
+            padding-left: 70px;
+            padding-right: 25px;
+        }
+        
+        .left::after, .right::after {
+            left: 18px;
+        }
+        
+        .right {
+            left: 0;
+        }
+    }   
+
+    // Peojects page adjustments
+    .projects-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+
+    // Skills page adjustments
+    .skills-categories{
+        grid-template-columns: 1fr;
+    }
+    .experience-section{
+        .timeline::before {
+            left: 31px;
+        }
+        
+        .timeline-item {
+            width: 100%;
+            padding-left: 70px;
+            padding-right: 25px;
+        }
+        
+        .left, .right {
+            left: 0;
+            text-align: left;
+        }
+        
+        .left::after, .right::after {
+            left: 18px;
+        }
+    }
+
+    // Contact page adjustments
+    .contact-methods {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: $breakpoint-mobile) {
+    .hero-text h1 {
+        font-size: 2.2rem;
+    }
+    
+    .btn,.cta-btn1 {
+        display: block;
+        margin: 1rem auto;
+        width: 80%;
+    }
+    // Adjust for about page
+    .page-header h1 {
+        font-size: 2.5rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    // Adjust skills grid layouts for mobile
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    // Projects page adjustments
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .modal-image {
+        height: 250px;
+    }
+    
+    .modal-body {
+        padding: 1.5rem;
+        
+        h2 {
+        font-size: 1.8rem;
+        }
+    }
+    
+    .modal-links {
+        flex-direction: column;
+    }
+    
+    .project-links {
+        flex-direction: column;
+    }
+
+    // Skills page adjustments
+    .skills-categories {
+        grid-template-columns: 1fr;
+    }
+    
+    .tools-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .certifications-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .path-items {
+        grid-template-columns: 1fr;
+    }
+    
+    // Contact page adjustments
+    .contact-form {
+        padding: $spacing-lg;
+    }
+}

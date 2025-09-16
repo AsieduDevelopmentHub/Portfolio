@@ -1,0 +1,75 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  padding: $spacing-xs 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    font-weight: $font-weight-bold;
+    font-size: 1.4rem;
+    color: $goldenrod;
+    img{
+      display: inline-block;
+      height: 80px;
+      padding: 0;
+      position: relative;
+    }
+    span {
+      color: $dark;
+    }
+  }
+  
+  nav {
+    ul {
+      display: flex;
+      list-style: none;
+      
+      li {
+        margin-left: $spacing-lg;
+        
+        a {
+          text-decoration: none;
+          color: $dark;
+          font-weight: $font-weight-medium;
+          transition: color 0.3s;
+          position: relative;
+          
+          &:hover {
+            color: $goldenrod;
+          }
+          
+          &.active {
+            color: $goldenrod;
+            
+            &::after {
+              content: '';
+              position: absolute;
+              bottom: -5px;
+              left: 0;
+              width: 100%;
+              height: 2px;
+              background-color: $goldenrod;
+            }
+          }
+        }
+      }
+    }
+    
+    .menu-btn {
+      display: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: $dark;
+    }
+  }
+}

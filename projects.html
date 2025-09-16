@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asiedu Development Hub - Home</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <div id="header-container"></div>
+  
+  <main>
+    <section class="page-header">
+        <h1>My Projects</h1>
+        <p>A showcase of my work in web development, embedded systems, and IoT solutions</p>
+    </section>
+
+    <!-- Projects Content -->
+    <section class="projects-content">
+        <div class="container">
+            <h2 class="section-title">Project <span>Portfolio</span></h2>
+            
+            <!-- Project Filters -->
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="web">Web Development</button>
+                <button class="filter-btn" data-filter="iot">IoT & Embedded Systems</button>
+                <button class="filter-btn" data-filter="fullstack">Full-Stack Applications</button>
+            </div>
+            
+            <!-- Projects Grid -->
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card" data-category="iot">
+                    <div class="project-image">
+                        <div style="background: linear-gradient(45deg, #2c3e50, #4ca1af); height: 100%; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                            <i class="fas fa-blind"></i>
+                        </div>
+                        <div class="project-category">IoT</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>SmartStick 1.8</h3>
+                        <p>An assistive device for the visually impaired with ultrasonic sensors, GPS tracking, and GSM alert system.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">ESP32</span>
+                            <span class="project-tag">GSM</span>
+                            <span class="project-tag">GPS</span>
+                            <span class="project-tag">Arduino</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link view-details" data-project="1">
+                                <i class="fas fa-eye"></i> View Details
+                            </a>
+                            <a href="https://github.com/AsieduDevelopmentHub/SmartStick" class="project-link outline" target="_blank">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <div style="background: linear-gradient(45deg, #8e2de2, #4a00e0); height: 100%; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="project-category">Web App</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>E-Commerce Platform</h3>
+                        <p>Full-stack eCommerce solution with product management, shopping cart, and Paystack payment integration.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Node.js</span>
+                            <span class="project-tag">Firebase</span>
+                            <span class="project-tag">Paystack</span>
+                            <span class="project-tag">JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link view-details" data-project="2">
+                                <i class="fas fa-eye"></i> View Details
+                            </a>
+                            <a href="https://github.com/AsieduDevelopmentHub/KofKaN Technologies" class="project-link outline" target="_blank">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card" data-category="iot">
+                    <div class="project-image">
+                        <div style="background: linear-gradient(45deg, #f46b45, #eea849); height: 100%; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                            <i class="fas fa-temperature-low"></i>
+                        </div>
+                        <div class="project-category">IoT</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Refrigerator Monitoring System</h3>
+                        <p>IoT solution for monitoring energy consumption, temperature control, and cost calculation for refrigeration systems.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">ESP32</span>
+                            <span class="project-tag">Sensors</span>
+                            <span class="project-tag">Firebase</span>
+                            <span class="project-tag">Dashboard</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link view-details" data-project="3">
+                                <i class="fas fa-eye"></i> View Details
+                            </a>
+                            <a href="https://github.com/AsieduDevelopmentHub/Refrigerator-Monitor" class="project-link outline" target="_blank">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="project-card" data-category="fullstack">
+                    <div class="project-image">
+                        <div style="background: linear-gradient(45deg, #1d976c, #93f9b9); height: 100%; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                            <i class="fas fa-laptop-medical"></i>
+                        </div>
+                        <div class="project-category">Full-Stack</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>VitalGo Healthcare Platform</h3>
+                        <p>A video consultation platform that connects patients with doctors for online medical appointments.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">WebRTC</span>
+                            <span class="project-tag">Node.js</span>
+                            <span class="project-tag">Firebase</span>
+                            <span class="project-tag">JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link view-details" data-project="4">
+                                <i class="fas fa-eye"></i> View Details
+                            </a>
+                            <a href="https://github.com/AsieduDevelopmentHub/Vital-Go" class="project-link outline" target="_blank">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 5 -->
+                <div class="project-card" data-category="iot">
+                    <div class="project-image">
+                        <div style="background: linear-gradient(45deg, #3a7bd5, #00d2ff); height: 100%; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <div class="project-category">IoT</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Biomass Monitoring System</h3>
+                        <p>An IoT-based system for monitoring soil conditions, controlling irrigation, and managing lighting for biomass production.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">ESP32</span>
+                            <span class="project-tag">Sensors</span>
+                            <span class="project-tag">Automation</span>
+                            <span class="project-tag">Dashboard</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link view-details" data-project="5">
+                                <i class="fas fa-eye"></i> View Details
+                            </a>
+                            <a href="https://github.com/AsieduDevelopmentHub/Biomass-Monitor" class="project-link outline" target="_blank">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 6 -->
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <div style="background: linear-gradient(45deg, #ff5e62, #ff9966); height: 100%; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="project-category">Web App</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>AI Chatbot System</h3>
+                        <p>A web-based chatbot with natural language processing capabilities and an auto-scrolling chat interface.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">AI</span>
+                            <span class="project-tag">Web Speech API</span>
+                            <span class="project-tag">CSS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link view-details" data-project="6">
+                                <i class="fas fa-eye"></i> View Details
+                            </a>
+                            <a href="https://github.com/AsieduDevelopmentHub/AI-Chatbot" class="project-link outline" target="_blank">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Modals -->
+    <!-- Modal 1: SmartStick -->
+    <div class="modal" id="modal-1">
+        <div class="modal-content">
+            <div class="close-modal">&times;</div>
+            <div class="modal-image">
+                <div style="background: linear-gradient(45deg, #2c3e50, #4ca1af); height: 100%; display: flex; align-items: center; justify-content: center; color: white; font-size: 5rem;">
+                    <i class="fas fa-blind"></i>
+                </div>
+            </div>
+            <div class="modal-body">
+                <h2>SmartStick 1.8</h2>
+                <p>An innovative assistive device designed to enhance mobility and safety for the visually impaired. This smart walking stick incorporates cutting-edge technology to detect obstacles, provide navigation assistance, and send emergency alerts.</p>
+                
+                <h3>Project Overview</h3>
+                <p>The SmartStick 1.8 was developed to address the challenges faced by visually impaired individuals in navigating their environment independently. The device uses ultrasonic sensors to detect obstacles at different heights and provides haptic feedback to the user.</p>
+                
+                <h3>Key Features</h3>
+                <div class="modal-features">
+                    <ul>
+                        <li>Obstacle detection using ultrasonic sensors</li>
+                        <li>GPS tracking for location monitoring</li>
+                        <li>GSM module for emergency alerts to predefined contacts</li>
+                        <li>Haptic feedback system for intuitive user interaction</li>
+                        <li>Long-lasting battery with power management system</li>
+                        <li>Water-resistant design for all-weather use</li>
+                    </ul>
+                </div>
+                
+                <h3>Technologies Used</h3>
+                <div class="modal-tech">
+                    <span>ESP32 Microcontroller</span>
+                    <span>Arduino C++</span>
+                    <span>Ultrasonic Sensors</span>
+                    <span>SIM800L GSM Module</span>
+                    <span>NEO-6M GPS Module</span>
+                    <span>Lithium-ion Battery</span>
+                </div>
+                
+                <div class="modal-links">
+                    <a href="https://github.com/AsieduDevelopmentHub/SmartStick" class="project-link" target="_blank">
+                        <i class="fab fa-github"></i> View Source Code
+                    </a>
+                    <a href="#" class="project-link outline">
+                        <i class="fas fa-video"></i> Watch Demo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Additional modals for other projects would follow the same structure as above -->
+     <div class="modal" id="modal-2">
+        <div class="modal-content">
+            <div class="close-modal">&times;</div>
+            <div class="modal-image">
+                <div style="background: linear-gradient(45deg, #8e2de2, #4a00e0); height: 100%; display: flex; align-items: center; justify-content: center; color: white; font-size: 5rem;">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+            </div>
+            <div class="modal-body">
+                <h2>E-Commerce Platform</h2>
+                <p>A comprehensive full-stack eCommerce platform designed to provide a seamless shopping experience for users. The platform features product management, a shopping cart, and secure payment integration using Paystack.</p>
+                
+                <h3>Project Overview</h3>
+                <p>This eCommerce platform was developed to facilitate online shopping with an intuitive user interface and robust backend functionality. It allows users to browse products, add items to their cart, and complete purchases securely.</p>
+                
+                <h3>Key Features</h3>
+                <div class="modal-features">
+                    <ul>
+                        <li>User authentication and profile management</li>
+                        <li>Product catalog with search and filter options</li>
+                        <li>Shopping cart functionality with real-time updates</li>
+                        <li>Secure payment processing via Paystack API</li>
+                        <li>Order history and tracking for users</li>
+                        <li>Admin dashboard for managing products and orders</li>
+                    </ul>
+                </div>
+                
+                <h3>Technologies Used</h3>
+                <div class="modal-tech">
+                    <span>Node.js</span>
+                    <span>Express.js</span>
+                    <span>Firebase</span>
+                    <span>JavaScript</span>
+                    <span>HTML & CSS</span>
+                    <span>Paystack API</span>
+                </div>
+                <div class="modal-links">
+                    <a href="https://github.com/AsieduDevelopmentHub/KofKaN-Technologies/tree/shop/" class="project-link" target="_blank">
+                        <i class="fab fa-github"></i> View Source Code
+                    </a>
+                    <a href="#" class="project-link outline">
+                        <i class="fas fa-video"></i> Watch Demo
+                    </a>
+                </div>
+            </div>
+          </div>
+     </div>
+
+     <div class="modal" id="modal-3">
+        <div class="modal-content">
+            <div class="close-modal">&times;</div>
+            <div class="modal-image">
+                <div style="background: linear-gradient(45deg, #f46b45, #eea849); height: 100%; display: flex; align-items: center; justify-content: center; color: white; font-size: 5rem;">
+                    <i class="fas fa-temperature-low"></i>
+                </div>
+            </div>
+            <div class="modal-body">
+                <h2>Refrigerator Monitoring System</h2>
+                <p>An IoT-based monitoring system designed to track and manage the performance of refrigeration units. The system provides real-time data on temperature, energy consumption, and operational status through a user-friendly dashboard.</p>
+                
+                <h3>Project Overview</h3>
+                <p>This project aims to enhance the efficiency and reliability of refrigeration systems by providing continuous monitoring and alerts for any anomalies. It helps in reducing energy costs and preventing equipment failures.</p>
+                
+                <h3>Key Features</h3>
+                <div class="modal-features">
+                    <ul>
+                        <li>Real-time temperature monitoring with alerts</li>
+                        <li>Energy consumption tracking and reporting</li>
+                        <li>Remote access to data via a web dashboard</li>
+                        <li>Automated notifications for maintenance needs</li>
+                        <li>Data logging for performance analysis</li>
+                        <li>Easy installation with wireless connectivity</li>
+                    </ul>
+                </div>
+                
+                <h3>Technologies Used</h3>
+                <div class="modal-tech">
+                    <span>ESP32 Microcontroller</span>
+                    <span>Temperature & Humidity Sensors</span>
+                    <span>Firebase</span>
+                    <span>JavaScript</span>
+                    <span>HTML & CSS</span>
+                    <span>IoT Dashboard</span>
+                </div>
+                <div class="modal-links">
+                    <a href="https://github.com/AsieduDevelopmentHub/student/tree/main/FridgeMonitoringSystem" class="project-link" target="_blank">
+                        <i class="fab fa-github"></i> View Source Code
+                    </a>
+                    <a href="#" class="project-link outline">
+                        <i class="fas fa-video"></i> Watch Demo
+                    </a>
+                </div>
+              </div>  
+          </div>
+     </div>
+         <!-- Modal 4: VitalGo Healthcare Platform -->
+    <div class="modal" id="modal-4">
+        <div class="modal-content">
+            <div class="close-modal">&times;</div>
+            <div class="modal-image">
+                <div style="background: linear-gradient(45deg, #1d976c, #93f9b9); height: 100%; display: flex; align-items: center; justify-content: center; color: white; font-size: 5rem;">
+                    <i class="fas fa-laptop-medical"></i>
+                </div>
+            </div>
+            <div class="modal-body">
+                <h2>VitalGo Healthcare Platform</h2>
+                <p>A comprehensive telemedicine solution that connects patients with healthcare professionals through secure video consultations, appointment scheduling, and medical record management.</p>
+                
+                <h3>Project Overview</h3>
+                <p>VitalGo was designed to make healthcare more accessible, especially in remote areas. The platform enables patients to consult with doctors online, book appointments, and manage their health records securely.</p>
+                
+                <h3>Key Features</h3>
+                <div class="modal-features">
+                    <ul>
+                        <li>Secure video consultations using WebRTC technology</li>
+                        <li>Appointment scheduling and management system</li>
+                        <li>Patient medical records with secure access controls</li>
+                        <li>Prescription management and digital prescriptions</li>
+                        <li>Multi-platform support (web, mobile-responsive)</li>
+                        <li>Secure payment integration for consultations</li>
+                    </ul>
+                </div>
+                
+                <h3>Technologies Used</h3>
+                <div class="modal-tech">
+                    <span>Node.js</span>
+                    <span>Express.js</span>
+                    <span>WebRTC</span>
+                    <span>Firebase</span>
+                    <span>JavaScript</span>
+                    <span>HTML/CSS</span>
+                    <span>Paystack API</span>
+                </div>
+                
+                <div class="modal-links">
+                    <a href="https://github.com/AsieduDevelopmentHub/Vital-Go" class="project-link" target="_blank">
+                        <i class="fab fa-github"></i> View Source Code
+                    </a>
+                    <a href="#" class="project-link outline">
+                        <i class="fas fa-video"></i> Watch Demo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 5: Biomass Monitoring System -->
+    <div class="modal" id="modal-5">
+        <div class="modal-content">
+            <div class="close-modal">&times;</div>
+            <div class="modal-image">
+                <div style="background: linear-gradient(45deg, #3a7bd5, #00d2ff); height: 100%; display: flex; align-items: center; justify-content: center; color: white; font-size: 5rem;">
+                    <i class="fas fa-seedling"></i>
+                </div>
+            </div>
+            <div class="modal-body">
+                <h2>Biomass Monitoring System</h2>
+                <p>An IoT-based agricultural monitoring system that tracks soil conditions, controls irrigation, and manages lighting for optimal biomass production in controlled environments.</p>
+                
+                <h3>Project Overview</h3>
+                <p>This system was developed to help farmers and agricultural researchers monitor and optimize growing conditions for biomass production. It automates irrigation and lighting based on real-time sensor data.</p>
+                
+                <h3>Key Features</h3>
+                <div class="modal-features">
+                    <ul>
+                        <li>Real-time monitoring of soil moisture, temperature, and pH levels</li>
+                        <li>Automated irrigation control based on soil conditions</li>
+                        <li>Smart lighting system with adjustable intensity and duration</li>
+                        <li>Remote monitoring and control via web dashboard</li>
+                        <li>Data logging and analytics for growth optimization</li>
+                        <li>Energy-efficient design with solar power option</li>
+                    </ul>
+                </div>
+                
+                <h3>Technologies Used</h3>
+                <div class="modal-tech">
+                    <span>ESP32</span>
+                    <span>Arduino C++</span>
+                    <span>Soil Moisture Sensors</span>
+                    <span>Temperature Sensors</span>
+                    <span>pH Sensors</span>
+                    <span>Relay Modules</span>
+                    <span>Firebase Realtime Database</span>
+                    <span>Web Dashboard</span>
+                </div>
+                
+                <div class="modal-links">
+                    <a href="https://github.com/AsieduDevelopmentHub/Biomass-Monitor" class="project-link" target="_blank">
+                        <i class="fab fa-github"></i> View Source Code
+                    </a>
+                    <a href="#" class="project-link outline">
+                        <i class="fas fa-video"></i> Watch Demo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 6: AI Chatbot System -->
+    <div class="modal" id="modal-6">
+        <div class="modal-content">
+            <div class="close-modal">&times;</div>
+            <div class="modal-image">
+                <div style="background: linear-gradient(45deg, #ff5e62, #ff9966); height: 100%; display: flex; align-items: center; justify-content: center; color: white; font-size: 5rem;">
+                    <i class="fas fa-robot"></i>
+                </div>
+            </div>
+            <div class="modal-body">
+                <h2>AI Chatbot System</h2>
+                <p>An intelligent web-based chatbot with natural language processing capabilities, designed to provide responsive and contextual conversations with users.</p>
+                
+                <h3>Project Overview</h3>
+                <p>This AI chatbot was created to demonstrate the integration of natural language processing in web applications. It can understand user queries, provide relevant responses, and learn from interactions.</p>
+                
+                <h3>Key Features</h3>
+                <div class="modal-features">
+                    <ul>
+                        <li>Natural language processing for understanding user queries</li>
+                        <li>Contextual conversation management</li>
+                        <li>Voice input and output using Web Speech API</li>
+                        <li>Auto-scrolling chat interface with message history</li>
+                        <li>Customizable responses and conversation flows</li>
+                        <li>Learning capability to improve responses over time</li>
+                    </ul>
+                </div>
+                
+                <h3>Technologies Used</h3>
+                <div class="modal-tech">
+                    <span>JavaScript</span>
+                    <span>Natural Language Processing</span>
+                    <span>Web Speech API</span>
+                    <span>HTML5/CSS3</span>
+                    <span>Node.js</span>
+                    <span>Firebase</span>
+                    <span>Machine Learning Concepts</span>
+                </div>
+                
+                <div class="modal-links">
+                    <a href="https://github.com/AsieduDevelopmentHub/AI-Chatbot" class="project-link" target="_blank">
+                        <i class="fab fa-github"></i> View Source Code
+                    </a>
+                    <a href="#" class="project-link outline">
+                        <i class="fas fa-video"></i> Watch Demo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <section class="contact-cta">
+        <h2>Have a Project in Mind?</h2>
+        <p>I'm always excited to take on new challenges and bring innovative ideas to life. Let's discuss how we can work together on your next project.</p>
+        <a href="contact.html" class="cta-btn">Get In Touch</a>
+    </section>
+  </main>
+  
+  <div id="footer-container"></div>
+  
+  <script src="js/components/headerFooter.js"></script>
+  <script src="js/components/projects.js"></script>
+  <script src="js/components/animation.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
