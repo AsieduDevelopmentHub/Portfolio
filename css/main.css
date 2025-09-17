@@ -19,7 +19,7 @@ header .logo {
   display: flex;
   align-items: center;
   font-weight: 700;
-  font-size: 1.4rem;
+  font-size: 2rem;
   color: #DAA520;
   transition: transform 0.3s ease;
 }
@@ -136,7 +136,7 @@ header nav .menu-btn.active i {
     position: fixed;
     top: 0;
     right: -100%;
-    width: 280px;
+    width: min(450px, 80%);
     height: 100dvh;
     background: linear-gradient(90deg, #FFFFFF, #F5B502, #F5B502);
     -webkit-backdrop-filter: blur(20px);
@@ -229,7 +229,7 @@ header nav .menu-btn.active i {
     height: 60px;
   }
   header .logo span {
-    font-size: 1.2rem;
+    font-size: 1.8rem;
   }
 }
 @media (max-width: 768px) {
@@ -240,10 +240,10 @@ header nav .menu-btn.active i {
     height: 50px;
   }
   header .logo span {
-    font-size: 1.1rem;
+    font-size: 1.4rem;
   }
   header nav ul {
-    width: 250px;
+    width: min(450px, 90%);
     padding: 3rem 2rem;
   }
   header nav ul.show li a {
@@ -1862,7 +1862,7 @@ footer .copyright {
 .contact-methods {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 3rem;
+  gap: 2rem;
   margin-bottom: 4rem;
 }
 
@@ -2171,6 +2171,7 @@ textarea.form-control {
   }
   .contact-methods {
     grid-template-columns: 1fr;
+    padding: 0.5rem;
   }
   .stats-grid {
     grid-template-columns: repeat(2, 1fr);

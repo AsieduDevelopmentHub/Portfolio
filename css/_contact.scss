@@ -24,7 +24,7 @@
 .contact-methods {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: $spacing-xl;
+  gap: $spacing-lg;
   margin-bottom: $spacing-xxl;
 }
 
