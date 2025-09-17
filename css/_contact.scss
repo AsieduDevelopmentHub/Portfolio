@@ -26,10 +26,7 @@
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: $spacing-xl;
   margin-bottom: $spacing-xxl;
-  padding: $spacing-lg;
 }
-
-
 
 .contact-card {
   background: $white;

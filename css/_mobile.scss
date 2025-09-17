@@ -1,39 +1,4 @@
  @media (max-width: $breakpoint-tablet) {
-    // Header adjustments
-    header {
-        nav {
-        ul {
-            display: none;
-            flex-direction: column;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            width: 100%;
-            background: $white;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            padding: $spacing-sm 0;
-            
-            &.show {
-            display: flex;
-            }
-            
-            li {
-            margin: 0;
-            text-align: center;
-            
-            a {
-                display: block;
-                padding: $spacing-sm;
-            }
-            }
-        }
-        
-        .menu-btn {
-            display: block;
-        }
-        }
-    }
-
     // Hero section adjustments
     .hero-content {
         grid-template-columns: 1fr;
@@ -135,6 +100,12 @@
     .contact-methods {
         grid-template-columns: 1fr;
     }
+
+    // Achievements adjustments
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: $spacing-md;
+    }
 }
 
 @media (max-width: $breakpoint-mobile) {
@@ -206,5 +177,19 @@
     // Contact page adjustments
     .contact-form {
         padding: $spacing-lg;
+    }
+
+    // Achievements adjustments
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: $spacing-md;
+    }
+
+    .stat-card {
+        padding: $spacing-lg;
+    }
+
+    .stat-number {
+        font-size: 2rem;
     }
 }

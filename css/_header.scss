@@ -4,13 +4,27 @@ header {
   left: 0;
   width: 100%;
   z-index: 1000;
-  background: rgba(255, 255, 255, 0.95);
-  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(10px);
-  padding: $spacing-xs 5%;
+  background: rgba(255, 255, 255, 0.65);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(12px);
+  padding: $spacing-xs 3%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  
+  // Header scroll effect
+  // &.scrolled {
+  //   padding: $spacing-xs 5%;
+  //   background: rgba(255, 255, 255, 0.98);
+  //   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
+    
+  //   .logo {
+  //     img {
+  //       height: 60px;
+  //     }
+  //   }
+  // }
   
   .logo {
     display: flex;
@@ -18,48 +32,106 @@ header {
     font-weight: $font-weight-bold;
     font-size: 1.4rem;
     color: $goldenrod;
-    img{
+    transition: transform 0.3s ease;
+    
+    &:hover {
+      transform: scale(1.02);
+    }
+    
+    img {
       display: inline-block;
       height: 80px;
       padding: 0;
       position: relative;
+      transition: all 0.3s ease;
+      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
     }
+    
     span {
       color: $dark;
+      margin-left: $spacing-sm;
+      transition: color 0.3s ease;
+    }
+    
+    &:hover span {
+      color: $goldenrod;
     }
   }
   
   nav {
+    display: flex;
+    align-items: center;
+    
     ul {
       display: flex;
       list-style: none;
+      margin: 0;
+      padding: 0;
+      gap: $spacing-lg;
       
       li {
-        margin-left: $spacing-lg;
+        position: relative;
         
         a {
           text-decoration: none;
           color: $dark;
-          font-weight: $font-weight-medium;
-          transition: color 0.3s;
+          font-weight: $font-weight-semibold;
+          transition: all 0.3s ease;
           position: relative;
+          padding: $spacing-sm $spacing-xs;
+          border-radius: 6px;
           
+          // Hover effect with background
           &:hover {
             color: $goldenrod;
+            transform: translateY(-2px);
           }
           
+          // Active state with animated underline
           &.active {
             color: $goldenrod;
+            font-weight: $font-weight-bold;
+            
+            &::before {
+              content: '';
+              position: absolute;
+              bottom: -5px;
+              left: 50%;
+              transform: translateX(-50%);
+              width: 80%;
+              height: 3px;
+              background: linear-gradient(90deg, $goldenrod-light, $beige-dark, $goldenrod-light);
+              border-radius: 2px;
+              animation: pulseLine 2s infinite;
+            }
             
             &::after {
               content: '';
               position: absolute;
               bottom: -5px;
               left: 0;
-              width: 100%;
-              height: 2px;
-              background-color: $goldenrod;
+              width: 80%;
+              height: 3px;
+              background: linear-gradient(90deg, transparent, rgba($goldenrod-light, 0.5), transparent);
+              animation: shimmer 4s infinite;
             }
+          }
+          
+          // Hover underline animation
+          &::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            width: 0;
+            height: 3px;
+            background: linear-gradient(90deg, $goldenrod-light, $beige-dark, $goldenrod-light);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+          }
+          
+          &:hover::after {
+            width: 80%;
           }
         }
       }
@@ -70,6 +142,205 @@ header {
       font-size: 1.5rem;
       cursor: pointer;
       color: $dark;
+      background: none;
+      border: none;
+      padding: $spacing-xs;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+      position: relative;
+      z-index: 1001;
+      
+      i {
+        transition: transform 0.3s ease;
+      }
+      
+      &.active i {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  
+  // Mobile styles
+  @media (max-width: $breakpoint-tablet) {
+    padding: $spacing-sm 2%;
+    
+    nav {
+      ul {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        height: 100dvh;
+        background: linear-gradient(90deg, $white, $goldenrod-light, $goldenrod-light);
+        backdrop-filter: blur(20px);
+        flex-direction: column;
+        padding: $spacing-xxl $spacing-xl;
+        box-shadow: -100px 0 30px rgba(0, 0, 0, 0.20), inset 0 0 12px rgba(0, 0, 0, 0.85);
+        transition: right 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        gap: $spacing-md;
+        z-index: 999;
+        
+        // Mobile menu overlay
+        &::before {
+          content: '';
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.5);
+          opacity: 0;
+          visibility: hidden;
+          transition: all 0.3s ease;
+          z-index: -1;
+        }
+        
+        // Show mobile menu
+        &.show {
+          right: 0;
+          
+          &::before {
+            opacity: 1;
+            visibility: visible;
+          }
+          
+          // Staggered animation for menu items
+          li {
+            opacity: 0;
+            transform: translateX(30px);
+            animation: slideInRight 0.4s ease forwards;
+            
+            @for $i from 1 through 6 {
+              &:nth-child(#{$i}) {
+                animation-delay: 0.1s * $i;
+              }
+            }
+            
+            a {
+              display: block;
+              padding: $spacing-md;
+              border-radius: 8px;
+              font-size: 1.1rem;
+              
+              &:hover {
+                background: rgba($goldenrod, 0.15);
+                transform: translateX(5px);
+              }
+              
+              &.active {
+                background: rgba($goldenrod, 0.2);
+                
+                &::before,
+                &::after {
+                  display: none;
+                }
+              }
+              
+              &::after {
+                bottom: 0;
+                left: 0;
+                height: 100%;
+                width: 3px;
+                transform: none;
+                transition: height 0.3s ease;
+              }
+              
+              &:hover::after {
+                width: 3px;
+                height: 100%;
+              }
+            }
+          }
+        }
+      }
+      
+      .menu-btn {
+        display: block;
+        
+        // Transform hamburger to X
+        &.active {
+          i {
+            &::before {
+              content: '\f00d'; // Font Awesome times icon
+            }
+          }
+        }
+      }
+    }
+    
+    // Adjust logo size on mobile
+    .logo {
+      img {
+        height: 60px;
+      }
+      
+      span {
+        font-size: 1.2rem;
+      }
+    }
+  }
+  
+  // Small mobile devices
+  @media (max-width: $breakpoint-mobile) {
+    padding: $spacing-xs 5%;
+    
+    .logo {
+      img {
+        height: 50px;
+      }
+      
+      span {
+        font-size: 1.1rem;
+      }
+    }
+    
+    nav {
+      ul {
+        width: 250px;
+        padding: $spacing-xl $spacing-lg;
+        
+        &.show {
+          li {
+            a {
+              padding: $spacing-sm;
+              font-size: 1rem;
+            }
+          }
+        }
+      }
     }
   }
 }
+
+// Keyframe animations
+@keyframes pulseLine {
+  0%, 100% {
+    opacity: 1;
+    transform: translateX(-50%) scaleX(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: translateX(-50%) scaleX(0.8);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+

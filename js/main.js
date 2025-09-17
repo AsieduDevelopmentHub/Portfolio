@@ -71,7 +71,76 @@ class ScrollButtons {
     }
 }
 
-// // Initialize when DOM is loaded
-// document.addEventListener('DOMContentLoaded', () => {
-//     new ScrollButtons();
-// });
+// Initialize menu functionality
+function initMenuFunctionality() {
+  // Mobile menu toggle
+  const menuBtn = document.querySelector('.menu-btn');
+  const nav = document.querySelector('nav ul');
+  const menuIcon = document.querySelector('.menu-btn i');
+  
+  if (menuBtn && nav && menuIcon) {
+    menuBtn.addEventListener('click', (e) => {
+      e.stopPropagation(); // Prevent event from bubbling to document
+      
+      // Toggle menu visibility with animation
+      nav.classList.toggle('show');
+      
+      // Toggle icon between bars and times (close)
+      if (nav.classList.contains('show')) {
+        menuIcon.classList.remove('fa-bars');
+        menuIcon.classList.add('fa-times');
+        document.body.style.overflow = 'hidden';
+      } else {
+        menuIcon.classList.remove('fa-times');
+        menuIcon.classList.add('fa-bars');
+        document.body.style.overflow = '';
+      }
+    });
+    
+    // Close menu when clicking on nav links (mobile)
+    const navLinks = document.querySelectorAll('nav ul li a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 768) {
+          nav.classList.remove('show');
+          menuIcon.classList.remove('fa-times');
+          menuIcon.classList.add('fa-bars');
+          document.body.style.overflow = '';
+        }
+      });
+    });
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (nav.classList.contains('show') && 
+          !nav.contains(e.target) && 
+          !menuBtn.contains(e.target)) {
+        nav.classList.remove('show');
+        menuIcon.classList.remove('fa-times');
+        menuIcon.classList.add('fa-bars');
+        document.body.style.overflow = '';
+      }
+    });
+    
+    // Close menu on escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && nav.classList.contains('show')) {
+        nav.classList.remove('show');
+        menuIcon.classList.remove('fa-times');
+        menuIcon.classList.add('fa-bars');
+        document.body.style.overflow = '';
+      }
+    });
+  }
+  
+  // Set active page in navigation
+  const currentPage = window.location.pathname.split('/').pop();
+  const navLinks = document.querySelectorAll('nav a');
+  
+  navLinks.forEach(link => {
+    const linkPage = link.getAttribute('href');
+    if (currentPage === linkPage) {
+      link.classList.add('active');
+    }
+  });
+}

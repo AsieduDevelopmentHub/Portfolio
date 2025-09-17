@@ -206,7 +206,63 @@
 }
 }
 
+.stats-section {
+    background: linear-gradient(45deg, $beige-dark, $goldenrod, $goldenrod, $goldenrod, $beige-dark);
+    padding: $spacing-xxl 0;
+    color: $white;
+    text-align: center;
 
+    h2 {
+        color: $white;
+        margin-bottom: $spacing-md;
+    }
+}
+
+.stats-grid {
+  
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: $spacing-lg;
+  margin-top: $spacing-xl;
+}
+
+.stat-card {
+    background: rgba($white, 0.1);
+    padding: $spacing-xl;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba($white, 0.2);
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: translateY(-5px);
+        background: rgba($white, 0.15);
+    }
+}
+
+.stat-icon {
+    font-size: 2.5rem;
+    margin-bottom: $spacing-md;
+    color: $white;
+}
+
+.stat-content {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xs;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: $font-weight-bold;
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    font-weight: $font-weight-medium;
+}
 
 // Projects Preview
 .projects-preview {
@@ -348,7 +404,40 @@
     background: $light-gray;
     padding: $spacing-lg;
     border-radius: 12px;
-    border-left: 4px solid $goldenrod;
+    border-right: 4px solid $goldenrod-light;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, 
+                   rgba($goldenrod-light, 0.1) 0%,
+                   rgba($goldenrod, 0.6) 100%);
+        transition: left 0.5s ease;
+        z-index: 1;
+    }
+    
+    &:hover::before {
+        left: 0;
+    }
+    
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        // border-left: 4px solid $goldenrod-light;
+    }
+    
+    // Ensure content stays above the gradient
+    & > * {
+        position: relative;
+        z-index: 2;
+    }
 }
 
 .testimonial-content p {

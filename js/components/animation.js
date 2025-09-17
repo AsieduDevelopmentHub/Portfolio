@@ -1,5 +1,7 @@
 // Animation for About Page
 document.addEventListener('DOMContentLoaded', function() {
+
+  new StatsCounter();
   // Animate timeline items
   const timelineItems = document.querySelectorAll('.timeline-item');
   
@@ -38,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
     threshold: 0.1
   });
   
-  skillCategories.forEach(category => {
+    skillCategories.forEach(category => {
     skillObserver.observe(category);
   });
 
@@ -59,3 +61,58 @@ document.addEventListener('DOMContentLoaded', function() {
     projectObserver.observe(card);
   });
 });
+
+
+// Animated Counter Functionality
+class StatsCounter {
+    constructor() {
+        this.counters = document.querySelectorAll('.stat-number');
+        this.hasAnimated = false;
+        this.init();
+    }
+
+    init() {
+        // Listen for scroll events
+        window.addEventListener('scroll', () => this.checkScroll());
+        // Initial check
+        this.checkScroll();
+    }
+
+    checkScroll() {
+        if (this.hasAnimated) return;
+
+        const statsSection = document.querySelector('.stats-section');
+        if (!statsSection) return;
+
+        const sectionPosition = statsSection.getBoundingClientRect();
+        const screenPosition = window.innerHeight / 1.3;
+
+        if (sectionPosition.top < screenPosition && sectionPosition.bottom > 0) {
+            this.animateCounters();
+            this.hasAnimated = true;
+        }
+    }
+
+    animateCounters() {
+        this.counters.forEach(counter => {
+            const target = parseInt(counter.getAttribute('data-target'));
+            const duration = 2000; // 2 seconds
+            const increment = target / (duration / 16); // 60fps
+            let current = 0;
+
+            const updateCounter = () => {
+                current += increment;
+                if (current > target) {
+                    counter.textContent = target + '+';
+                    return;
+                }
+
+                counter.textContent = Math.floor(current) + '+';
+                requestAnimationFrame(updateCounter);
+            };
+
+            updateCounter();
+        });
+    }
+}
+

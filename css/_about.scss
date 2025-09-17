@@ -6,6 +6,7 @@
   text-align: center;
   position: relative;
   z-index: 1;
+  
   &::before {
     content: '';
     position: absolute;
@@ -68,7 +69,8 @@
 .story-image {
   position: relative;
   height: 400px;
-  background: linear-gradient(45deg, $beige, $goldenrod-light);
+  background: linear-gradient(45deg, $beige, $goldenrod-light, $goldenrod);
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   overflow: hidden;
   display: flex;
