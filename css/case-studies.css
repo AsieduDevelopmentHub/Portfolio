@@ -1,0 +1,20 @@
+/* Case studies extend the existing portfolio palette. */
+.case-study { max-width: 900px; margin: auto; padding: 64px 24px; }
+.case-study > nav { margin-bottom: 32px; font-size: .95rem; }
+.case-study a, .case-link { color: #765600; text-underline-offset: 4px; }
+.case-study .case-heading { position: static; display: block; width: auto; padding: 0 0 32px; margin: 0 0 36px; background: transparent; box-shadow: none; backdrop-filter: none; border-bottom: 1px solid #ded8c5; }
+.case-heading h1 { font-size: clamp(2rem, 5vw, 3.5rem); line-height: 1.15; margin: 12px 0 20px; }
+.case-eyebrow { color: #765600; font-weight: 600; font-size: .9rem; }
+.case-summary { font-size: 1.2rem; max-width: 65ch; }
+.case-heading dl { display: flex; flex-wrap: wrap; gap: 20px 48px; margin: 28px 0; }
+.case-heading dt { font-size: .85rem; color: #555; }
+.case-heading dd { font-weight: 600; margin: 4px 0; }
+.case-study article section { margin: 0 0 32px; padding: 0; }
+.case-study h2 { font-size: 1.5rem; margin-bottom: 12px; }
+.case-study p { line-height: 1.85; }
+.case-contact { padding: 28px; margin: 40px 0; background: #f7f5ed; border-radius: 12px; }
+.case-link { display: inline-block; font-weight: 600; margin-top: 16px; }
+.project-content .case-eyebrow { margin-bottom: 12px; }
+.skip-link { position: fixed; top: -100px; left: 16px; z-index: 2000; background: white; padding: 12px; }
+.skip-link:focus { top: 12px; }
+@media(max-width: 600px) { .case-study { padding: 48px 20px; } .case-contact { padding: 20px; } }

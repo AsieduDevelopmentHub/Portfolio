@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE Modbus Gateway Case Study | Asiedu Minta Kwaku</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/main.css"><link rel="stylesheet" href="css/case-studies.css">
+  <meta name="description" content="Connecting an ESP32-C3 to generator controllers through Modbus RTU over RS485.">
+  <link rel="canonical" href="https://asiedudevhub.auralenx.com/case-study-dse-modbus-gateway.html">
+  <meta property="og:title" content="DSE Modbus Gateway Case Study | Asiedu Minta Kwaku">
+  <meta property="og:description" content="Connecting an ESP32-C3 to generator controllers through Modbus RTU over RS485.">
+  <meta property="og:url" content="https://asiedudevhub.auralenx.com/case-study-dse-modbus-gateway.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "DSE Modbus Gateway Case Study | Asiedu Minta Kwaku", "description": "Connecting an ESP32-C3 to generator controllers through Modbus RTU over RS485.", "url": "https://asiedudevhub.auralenx.com/case-study-dse-modbus-gateway.html", "author": {"@type": "Person", "@id": "https://asiedudevhub.auralenx.com/#person", "name": "Asiedu Minta Kwaku", "url": "https://asiedudevhub.auralenx.com/about.html"}}</script>
+</head>
+<body><a class="skip-link" href="#case-study">Skip to case study</a><div id="header-container"></div>
+<main id="case-study" class="case-study"><nav aria-label="Breadcrumb"><a href="index.html">Home</a> / <a href="projects.html">Projects</a> / DSE Modbus Gateway</nav>
+<article><header class="case-heading"><p class="case-eyebrow">Embedded systems and industrial communication</p><h1>DSE Modbus Gateway</h1><p class="case-summary">Connecting an ESP32-C3 to generator controllers through Modbus RTU over RS485.</p><dl><div><dt>Role</dt><dd>Embedded systems developer</dd></div><div><dt>Status</dt><dd>Public development repository</dd></div></dl><p>By <a href="about.html">Asiedu Minta Kwaku</a></p></header>
+<section><h2>The problem</h2><p>Industrial controllers expose useful operating information through protocols that need a hardware interface and careful interpretation. A gateway provides the bridge between a generator controller and software that can use those readings.</p></section>
+<section><h2>My role</h2><p>I work on the embedded gateway and its development workflow, connecting ESP32-based firmware with DSE generator controllers. The public repository is the reference for the current implementation and setup instructions.</p></section>
+<section><h2>The engineering approach</h2><p>The project uses an ESP32-C3 SuperMini with a MAX485 interface as a Modbus RTU master. Its primary target family includes DSE 7320 and 7320 MKII controllers. The documentation also covers Arduino bench environments to help separate electrical-interface issues from firmware behavior.</p></section>
+<section><h2>Decisions that matter</h2><p>Register layouts, serial communication, and electrical signal levels need to be checked against the actual controller and interface. The repository separates getting-started guidance, a serial CLI reference, requirements, and phase status so that bench observations can guide the next change.</p></section>
+<section><h2>Explore the work</h2><p>Read the repository for wiring guidance, build procedures, and diagnostics. This is an embedded communication project and a foundation for monitoring; the case study does not imply a deployed fleet or a completed cloud service.</p></section>
+<p><a class="case-link" href="https://github.com/AsieduDevelopmentHub/dse-modbus-gateway">Explore DSE Modbus Gateway &rarr;</a></p></article>
+<aside class="case-contact"><h2>Have a related project?</h2><p>I work on software, IoT, and embedded systems from Ghana, with clients and teams globally. Tell me about the problem you need to solve.</p><a class="case-link" href="mailto:asiedudev.hub@gmail.com">Discuss your project by email</a><p><a href="contact.html">More ways to connect</a></p></aside>
+<nav aria-label="Related case studies">Related work: <a href="case-study-novend-pos.html">Novend POS</a> · <a href="case-study-vital-go.html">Vital-Go</a></nav></main>
+<div id="footer-container"></div><script src="js/components/headerFooter.js"></script><script src="js/main.js"></script></body></html>
