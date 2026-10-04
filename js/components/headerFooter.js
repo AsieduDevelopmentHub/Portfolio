@@ -30,12 +30,11 @@ function createFooter() {
       <div class="footer-content">
         <div class="footer-about">
           <div class="footer-logo">Asiedu Development Hub</div>
-          <p>Creating innovative solutions that connect the physical and digital worlds through web development and embedded systems.</p>
+          <p>Asiedu Minta Kwaku — software developer, IoT and embedded systems engineer, and Co-founder &amp; CTO at Vital-Go.</p>
           <div class="social-links">
-            <a href="https://github.com/AsieduDevelopmentHub" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://bitly.cx/SCZZT" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a href="https://youtube.com/@asiedudev-hub" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://github.com/AsieduDevelopmentHub" target="_blank" rel="noopener noreferrer" aria-label="Github"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/asiedudevelopmenthub" target="_blank" rel="noopener noreferrer" aria-label="Linkedin"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.youtube.com/@asiedudevelopmenthub" target="_blank" rel="noopener noreferrer" aria-label="Youtube"><i class="fab fa-youtube"></i></a>
           </div>
         </div>
         
@@ -64,8 +63,8 @@ function createFooter() {
         <div class="footer-links">
           <h3>Contact Info</h3>
           <ul>
-            <li><i class="fas fa-envelope"></i> asiedudev.hub@gmail.com</li>
-            <li><i class="fas fa-phone"></i> +233 555 257 482</li>
+            <li><i class="fas fa-envelope"></i> <a href="mailto:asiedudev.hub@gmail.com">asiedudev.hub@gmail.com</a></li>
+            <li><i class="fas fa-phone"></i> <a href="https://wa.me/233555257482">+233 55 525 7482</a></li>
             <li><i class="fas fa-map-marker-alt"></i> Ghana</li>
           </ul>
         </div>
