@@ -13,15 +13,38 @@
   <meta name="twitter:card" content="summary">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "DSE Modbus Gateway Case Study | Asiedu Minta Kwaku", "description": "Connecting an ESP32-C3 to generator controllers through Modbus RTU over RS485.", "url": "https://asiedudevhub.auralenx.com/case-study-dse-modbus-gateway.html", "author": {"@type": "Person", "@id": "https://asiedudevhub.auralenx.com/#person", "name": "Asiedu Minta Kwaku", "url": "https://asiedudevhub.auralenx.com/about.html"}}</script>
 </head>
-<body><a class="skip-link" href="#case-study">Skip to case study</a><div id="header-container"></div>
-<main id="case-study" class="case-study"><nav aria-label="Breadcrumb"><a href="index.html">Home</a> / <a href="projects.html">Projects</a> / DSE Modbus Gateway</nav>
-<article><header class="case-heading"><p class="case-eyebrow">Embedded systems and industrial communication</p><h1>DSE Modbus Gateway</h1><p class="case-summary">Connecting an ESP32-C3 to generator controllers through Modbus RTU over RS485.</p><dl><div><dt>Role</dt><dd>Embedded systems developer</dd></div><div><dt>Status</dt><dd>Public development repository</dd></div></dl><p>By <a href="about.html">Asiedu Minta Kwaku</a></p></header>
-<section><h2>The problem</h2><p>Industrial controllers expose useful operating information through protocols that need a hardware interface and careful interpretation. A gateway provides the bridge between a generator controller and software that can use those readings.</p></section>
-<section><h2>My role</h2><p>I work on the embedded gateway and its development workflow, connecting ESP32-based firmware with DSE generator controllers. The public repository is the reference for the current implementation and setup instructions.</p></section>
-<section><h2>The engineering approach</h2><p>The project uses an ESP32-C3 SuperMini with a MAX485 interface as a Modbus RTU master. Its primary target family includes DSE 7320 and 7320 MKII controllers. The documentation also covers Arduino bench environments to help separate electrical-interface issues from firmware behavior.</p></section>
-<section><h2>Decisions that matter</h2><p>Register layouts, serial communication, and electrical signal levels need to be checked against the actual controller and interface. The repository separates getting-started guidance, a serial CLI reference, requirements, and phase status so that bench observations can guide the next change.</p></section>
-<section><h2>Explore the work</h2><p>Read the repository for wiring guidance, build procedures, and diagnostics. This is an embedded communication project and a foundation for monitoring; the case study does not imply a deployed fleet or a completed cloud service.</p></section>
-<p><a class="case-link" href="https://github.com/AsieduDevelopmentHub/dse-modbus-gateway">Explore DSE Modbus Gateway &rarr;</a></p></article>
-<aside class="case-contact"><h2>Have a related project?</h2><p>I work on software, IoT, and embedded systems from Ghana, with clients and teams globally. Tell me about the problem you need to solve.</p><a class="case-link" href="mailto:asiedudev.hub@gmail.com">Discuss your project by email</a><p><a href="contact.html">More ways to connect</a></p></aside>
-<nav aria-label="Related case studies">Related work: <a href="case-study-novend-pos.html">Novend POS</a> · <a href="case-study-vital-go.html">Vital-Go</a></nav></main>
-<div id="footer-container"></div><script src="js/components/headerFooter.js"></script><script src="js/main.js"></script></body></html>
+<body>
+<a class="skip-link" href="#case-study">Skip to case study</a>
+<div id="header-container"></div>
+<main id="case-study">
+    <section class="page-header">
+        <h1>DSE Modbus Gateway</h1>
+        <p>Connecting an ESP32-C3 to generator controllers through Modbus RTU over RS485.</p>
+    </section>
+    <section class="page-content case-content">
+        <div class="container">
+            <nav class="case-breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a> / <a href="projects.html">Projects</a> / <span aria-current="page">DSE Modbus Gateway</span></nav>
+            <div class="case-layout">
+                <article class="case-article"><section class="case-section"><h2>The problem</h2><div class="decorative-line"></div><p>Industrial controllers expose useful operating information through protocols that need a hardware interface and careful interpretation. A gateway provides the bridge between a generator controller and software that can use those readings.</p></section>
+<section class="case-section"><h2>My role</h2><div class="decorative-line"></div><p>I work on the embedded gateway and its development workflow, connecting ESP32-based firmware with DSE generator controllers. The public repository is the reference for the current implementation and setup instructions.</p></section>
+<section class="case-section"><h2>The engineering approach</h2><div class="decorative-line"></div><p>The project uses an ESP32-C3 SuperMini with a MAX485 interface as a Modbus RTU master. Its primary target family includes DSE 7320 and 7320 MKII controllers. The documentation also covers Arduino bench environments to help separate electrical-interface issues from firmware behavior.</p></section>
+<section class="case-section"><h2>Decisions that matter</h2><div class="decorative-line"></div><p>Register layouts, serial communication, and electrical signal levels need to be checked against the actual controller and interface. The repository separates getting-started guidance, a serial CLI reference, requirements, and phase status so that bench observations can guide the next change.</p></section>
+<section class="case-section"><h2>Explore the work</h2><div class="decorative-line"></div><p>Read the repository for wiring guidance, build procedures, and diagnostics. This is an embedded communication project and a foundation for monitoring; the case study does not imply a deployed fleet or a completed cloud service.</p></section></article>
+                <aside class="case-overview">
+                    <div class="service-icon"><i class="fas fa-microchip" aria-hidden="true"></i></div>
+                    <h2>Project Overview</h2>
+                    <div class="decorative-line"></div>
+                    <dl><div><dt>Role</dt><dd>Embedded systems developer</dd></div><div><dt>Status</dt><dd>Public development repository</dd></div></dl>
+                    <p>By <a href="about.html">Asiedu Minta Kwaku</a></p>
+                    <div class="project-tags"><span class="project-tag">ESP32-C3</span><span class="project-tag">Modbus RTU</span><span class="project-tag">RS485</span></div>
+                    <a class="project-link" href="https://github.com/AsieduDevelopmentHub/dse-modbus-gateway" target="_blank" rel="noopener noreferrer">Explore DSE Modbus Gateway <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                </aside>
+            </div>
+            <section class="case-related"><h2 class="section-title">Related <span>Work</span></h2><div class="project-links"><a class="project-link outline" href="case-study-novend-pos.html">Novend POS</a><a class="project-link outline" href="case-study-vital-go.html">Vital-Go</a></div></section>
+        </div>
+    </section>
+    <section class="contact-cta"><h2>Have a Project in Mind?</h2><p>Let’s discuss your software, IoT, or embedded systems project. Based in Ghana, working with clients and teams globally.</p><a class="cta-btn" href="contact.html">Let’s Discuss Your Project</a></section>
+</main>
+<div id="footer-container"></div>
+<script src="js/components/headerFooter.js"></script><script src="js/main.js"></script>
+</body></html>
